@@ -2,7 +2,7 @@
 namespace App\Command;
 
 use App\Insurance\FooInsurance\FooInsuranceStrategy;
-use App\Model\InsuranceDTO;
+use App\DTOs\InsuranceDTO;
 use App\Service\InsuranceService;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;

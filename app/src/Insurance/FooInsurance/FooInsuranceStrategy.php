@@ -2,7 +2,7 @@
 namespace App\Insurance\FooInsurance;
 
 use App\Insurance\InsuranceStrategy;
-use App\Model\InsuranceDTO;
+use App\DTOs\InsuranceDTO;
 
 /**
  * This class is the implementation of the InsuranceStrategy interface.
@@ -15,7 +15,7 @@ class FooInsuranceStrategy implements InsuranceStrategy
      * 
      * @param InsuranceDTO $insuranceDTO The insurance DTO.
      * 
-     * @return array<string> The response.
+     * @return string The response.
      */
     public function requestInsuranceQuote(InsuranceDTO $insuranceDTO): string
     {

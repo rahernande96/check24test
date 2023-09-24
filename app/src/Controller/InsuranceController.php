@@ -1,7 +1,7 @@
 <?php
 namespace App\Controller;
 
-use App\Model\InsuranceDTO;
+use App\DTOs\InsuranceDTO;
 use App\Service\InsuranceService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;

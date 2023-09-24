@@ -2,7 +2,7 @@
 namespace App\Service;
 
 use App\Insurance\InsuranceStrategy;
-use App\Model\InsuranceDTO;
+use App\DTOs\InsuranceDTO;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 
 class InsuranceService

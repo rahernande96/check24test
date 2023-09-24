@@ -2,7 +2,7 @@
 
 namespace App\Insurance\FooInsurance;
 
-use App\Model\InsuranceDTO;
+use App\DTOs\InsuranceDTO;
 
 class BuildRequest
 {
@@ -47,11 +47,25 @@ class BuildRequest
     private function addDatosGenerales(): void
     {
         $generalData = $this->xml->Datos->addChild('DatosGenerales');
-        $generalData->addChild('CondPpalEsTomador', $this->insuranceDTO->holder === 'CONDUCTOR_PRINCIPAL' ? 'S' : 'N');
-        $generalData->addChild('ConductorUnico', 'N');
+        $generalData->addChild('CondPpalEsTomador', $this->insuranceDTO->holder === 'CONDUCTOR_PRINCIPAL' ? 'N' : 'S');
+        $generalData->addChild('ConductorUnico', $this->insuranceDTO->occasionalDriver === 'SI' ? 'N' : 'S');
         $generalData->addChild('FecCot', date('c'));
-        $generalData->addChild('NroCondOca', '1');
-        $generalData->addChild('AnosSegAnte', '5');
+        $generalData->addChild('NroCondOca', $this->insuranceDTO->occasionalDriver === 'SI' ? '1' : '0');
+        $generalData->addChild('AnosSegAnte', $this->getPrevInsuranceYears());
+    }
+
+    
+    /**
+     * Calculates the number of years between the previous insurance contract date and expiration date.
+     *
+     * @return string The number of years between the previous insurance contract date and expiration date.
+     */
+    private function getPrevInsuranceYears(): string
+    {
+        $contractYear = date_create($this->insuranceDTO->prevInsurance_contractDate)->format('Y');
+        $expirationYear = date_create($this->insuranceDTO->prevInsurance_expirationDate)->format('Y');
+        
+        return strval($expirationYear - $contractYear);
     }
 
     /**
@@ -62,6 +76,6 @@ class BuildRequest
     private function addDatosAseguradora(): void
     {
         $prevInsuranceData = $this->xml->Datos->addChild('DatosAseguradora');
-        $prevInsuranceData->addChild('SeguroEnVigor', 'N');
+        $prevInsuranceData->addChild('SeguroEnVigor', $this->insuranceDTO->prevInsurance_exists === 'SI' ? 'S' : 'N');
     }
 }

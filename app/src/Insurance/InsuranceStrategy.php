@@ -1,7 +1,7 @@
 <?php
 namespace App\Insurance;
 
-use App\Model\InsuranceDTO;
+use App\DTOs\InsuranceDTO;
 
 
 /**
