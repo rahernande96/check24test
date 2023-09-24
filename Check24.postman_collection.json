@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"car_brand\": \"SEAT\",\r\n    \"car_fuel\":  \"Gasolina\",\r\n    \"car_model\": \"IBIZA\",\r\n    \"car_power\": \"No estoy seguro\",\r\n    \"car_purchaseSituation\": \"NUEVO\",\r\n    \"car_version\": \"00540140903\",\r\n    \"customer_journey_ok\": \"1\",\r\n    \"driver_birthDate\": \"2002-06-05\",\r\n    \"driver_birthPlace\": \"ESP\",\r\n    \"driver_birthPlaceMain\": \"ESP\",\r\n    \"driver_children\": \"NO\",\r\n    \"driver_civilStatus\": \"SOLTERO\",\r\n    \"driver_id\": \"36714791Y\",\r\n    \"driver_licenseDate\": \"2020-12-15\",\r\n    \"driver_licensePlace\": \"ESP\",\r\n    \"driver_licensePlaceMain\": \"ESP\",\r\n    \"driver_profession\": \"Estudiante\",\r\n    \"driver_sex\": \"MUJER\",\r\n    \"holder\": \"CONDUCTOR_PRINCIPAL\",\r\n    \"occasionalDriver\": \"NO\",\r\n    \"prevInsurance_claimsCount\": 0,\r\n    \"prevInsurance_emailRequest\": \"NO\",\r\n    \"prevInsurance_exists\": \"NO\",\r\n    \"prevInsurance_modality\": 1,\r\n    \"reference_code\": \"1TT02TT11\",\r\n    \"use_carUse\": \"OCASIONAL\",\r\n    \"use_nightParking\": \"CALLE\",\r\n    \"use_postalCode\": 28001\r\n}",
+					"raw": "{\r\n    \"holder\": \"CONDUCTOR_PRINCIPAL\",\r\n    \"occasionalDriver\": \"SI\",\r\n    \"prevInsurance_contractDate\": \"2013-03-03\",\r\n    \"prevInsurance_expirationDate\": \"2021-03-02\",\r\n    \"prevInsurance_exists\": \"SI\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
