@@ -32,9 +32,9 @@ class InsuranceController extends AbstractController
         $response = $this->insuranceService->requestInsuranceQuote($insuranceDTO);
 
         return new Response(
-            json_encode($response), 
+            $response, 
             Response::HTTP_OK, 
-            ['content-type' => 'application/json']
+            ['content-type' => 'application/xml']
         );
 
     }

@@ -17,17 +17,17 @@ class FooInsuranceStrategy implements InsuranceStrategy
      * 
      * @return array<string> The response.
      */
-    public function requestInsuranceQuote(InsuranceDTO $insuranceDTO): array
+    public function requestInsuranceQuote(InsuranceDTO $insuranceDTO): string
     {
         $buildRequest = (new BuildRequest($insuranceDTO))->build();
         
-        dump( $buildRequest->asXML() );
 
         // TODO: call the insurance API and return the response.
 
-        // TODO: return the response.
+        // TODO: return the response.++
+
         
-        return (array) $insuranceDTO;
+        return (string) $buildRequest->asXML();
     }
     
 }

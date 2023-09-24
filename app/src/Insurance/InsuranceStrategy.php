@@ -13,7 +13,7 @@ interface InsuranceStrategy
      * Requests an insurance quote based on the provided insurance data transfer object.
      *
      * @param InsuranceDTO $insuranceDTO The insurance data transfer object.
-     * @return array<string> An array containing the insurance quote.
+     * @return string An array containing the insurance quote.
      */
-    public function requestInsuranceQuote(InsuranceDTO $insuranceDTO): array; 
+    public function requestInsuranceQuote(InsuranceDTO $insuranceDTO): string; 
 }

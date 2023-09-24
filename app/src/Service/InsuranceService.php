@@ -20,9 +20,9 @@ class InsuranceService
      * Requests an insurance quote using the provided InsuranceDTO object.
      *
      * @param InsuranceDTO $insuranceDTO The InsuranceDTO object containing the necessary information for the quote.
-     * @return array<string> An array containing the quote information.
+     * @return string An array containing the quote information.
      */
-    public function requestInsuranceQuote(InsuranceDTO $insuranceDTO): array
+    public function requestInsuranceQuote(InsuranceDTO $insuranceDTO): string
     {
         return $this->strategy->requestInsuranceQuote($insuranceDTO);
     }
