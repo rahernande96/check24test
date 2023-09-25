@@ -1,3 +1,9 @@
+## Requirements
+
+To run the Check24 test project, you need to have Docker and Docker Compose installed on your machine.
+
+Docs: https://docs.docker.com/engine/install/
+
 ## Installation
 
 To install the Check24 test project, follow these commands:
@@ -53,6 +59,23 @@ Once inside the container, you can execute specific commands. For example, to ex
   bin/console insurance:quote "$(cat data.json)"
 ```
 This command assumes that bin/console is the entry point for your Symfony commands and that you have a data.json file with the required data.
+
+## Test from UI
+
+To test the project from the UI, you can use the following URL:
+
+```bash
+  http://localhost:8080/api/doc
+```
+
+## Test from Postman
+
+To test the project from Postman, you can use the following file:
+
+```bash
+  Check24.postman_collection.json
+```
+
 
 ## Run Tests
 

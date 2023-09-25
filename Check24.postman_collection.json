@@ -21,13 +21,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/insurance",
+					"raw": "http://localhost:8080/api/insurance",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"api",
 						"insurance"
 					]
 				}
